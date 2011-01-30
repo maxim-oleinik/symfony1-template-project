@@ -1,0 +1,10 @@
+# Project files
+/config/databases.yml
+/cache
+/log
+/data/sql
+/web/*dev.php
+/web/uploads/*
+
+# SCM files
+.git

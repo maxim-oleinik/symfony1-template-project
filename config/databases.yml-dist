@@ -1,0 +1,24 @@
+
+test:
+  doctrine:
+    param:
+      classname: DebugPDO
+      dsn:      mysql:host=localhost;dbname=DB_NAME
+      profiler: true
+
+dev:
+  doctrine:
+    param:
+      classname: DebugPDO
+
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      classname: DoctrinePDO
+      dsn:      mysql:host=localhost;dbname=DB_NAME
+      username: DB_USER
+      password: ~
+      encoding: utf8
+      persistent: true
+      pooling: true
