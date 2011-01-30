@@ -1,3 +1,6 @@
 [submodule "lib/vendor/symfony"]
 	path = lib/vendor/symfony
 	url = git://github.com/maxim-oleinik/Symfony.git
+[submodule "plugins/sfPhpunitPlugin"]
+	path = plugins/sfPhpunitPlugin
+	url = git://github.com/maxim-oleinik/sfPhpunitPlugin.git
