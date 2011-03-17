@@ -1,0 +1,40 @@
+prod:
+  .settings:
+    no_script_name:         true
+    logging_enabled:        true
+
+dev:
+  .settings:
+    cache:                  false
+    etag:                   false
+    web_debug:              true
+
+test:
+  .settings:
+    cache:                  false
+    etag:                   false
+    web_debug:              false
+
+all:
+  .actions:
+    # Обработка ошибок
+    error_404_module:       error
+    error_404_action:       error404
+
+  .settings:
+    no_script_name:         false
+    error_reporting:        <?php echo (E_ALL | E_STRICT), PHP_EOL; ?>
+    check_lock:             false # в положении on позволит сайт выключить
+    charset:                utf-8
+    default_culture:        ru_RU
+    i18n:                   false
+
+    # Form security secret (CSRF protection)
+    csrf_secret:            ##CSRF_SECRET##
+
+    # Output escaping settings
+    escaping_strategy:      true
+    escaping_method:        ESC_SPECIALCHARS
+
+    standard_helpers:       [Partial, JavascriptBase, Common]
+    enabled_modules:        []

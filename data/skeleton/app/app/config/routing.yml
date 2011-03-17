@@ -1,0 +1,9 @@
+
+# Test & Errors
+# ------------------------------------------------------------------------------
+test_500error:
+  url:   /test_500error
+  class: sfRequestRoute
+  param: { module: error, action: 500error }
+  requirements:
+    sf_method: post

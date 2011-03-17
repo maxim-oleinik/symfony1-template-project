@@ -1,0 +1,12 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+#    title: TITLE
+
+  stylesheets:    []
+  javascripts:    []
+
+  has_layout:     true
+  layout:         layout
