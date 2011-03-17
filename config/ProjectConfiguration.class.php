@@ -32,6 +32,7 @@ class ProjectConfiguration extends sfProjectConfiguration
     protected function initPlugins()
     {
         $this->enablePlugins(array(
+            'sfMainPlugin',
             'sfDoctrinePlugin',
             'sfPhpunitPlugin',
         ));

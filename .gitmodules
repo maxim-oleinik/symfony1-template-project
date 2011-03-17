@@ -4,3 +4,6 @@
 [submodule "plugins/sfPhpunitPlugin"]
 	path = plugins/sfPhpunitPlugin
 	url = git://github.com/maxim-oleinik/sfPhpunitPlugin.git
+[submodule "plugins/sfMainPlugin"]
+	path = plugins/sfMainPlugin
+	url = git://github.com/maxim-oleinik/sfMainPlugin.git

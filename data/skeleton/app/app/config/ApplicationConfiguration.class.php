@@ -20,6 +20,7 @@ class ##APP_NAME##Configuration extends sfApplicationConfiguration
     protected function initPlugins()
     {
         $plugins = array(
+            'sfMainPlugin',
             'sfDoctrinePlugin',
         );
 

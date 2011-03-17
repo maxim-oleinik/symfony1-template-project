@@ -1,6 +1,6 @@
 prod:
   logger:
-    class: PhpLogger
+    class: sfPhpLogger
     param:
       level:   warning
       loggers: ~
