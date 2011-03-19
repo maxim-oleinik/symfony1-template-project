@@ -3,22 +3,23 @@ test:
   doctrine:
     param:
       classname: DebugPDO
-      dsn:      mysql:host=localhost;dbname=DB_NAME
+      dsn:      mysql:host=localhost;dbname=DB_NAME_TEST
       profiler: true
 
 dev:
   doctrine:
     param:
       classname: DebugPDO
+      dsn:      mysql:host=localhost;dbname=DB_NAME_DEV
 
 all:
   doctrine:
     class: sfDoctrineDatabase
     param:
       classname: DoctrinePDO
-      dsn:      mysql:host=localhost;dbname=DB_NAME
+      dsn:      mysql:host=localhost;dbname=DB_NAME_PROD
       username: DB_USER
-      password: ~
+      password: DB_PASS
       encoding: utf8
       persistent: true
       pooling: true
