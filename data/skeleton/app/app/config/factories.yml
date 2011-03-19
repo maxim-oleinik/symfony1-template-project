@@ -1,9 +1,4 @@
-prod:
-  logger:
-    class: sfPhpLogger
-    param:
-      level:   warning
-      loggers: ~
+#prod:
 
 test:
   storage:

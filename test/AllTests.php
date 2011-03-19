@@ -18,6 +18,7 @@ class AllTests extends PHPUnit_Framework_TestSuite
         $files = sfFinder::type('file')->name('*Test.php')->in(array(
             $base.'/unit',
             $base.'/functional',
+            $base.'/../plugins/sfMainPlugin/test',
         ));
 
         foreach ($files as $file) {

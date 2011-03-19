@@ -1,7 +1,6 @@
 prod:
   .settings:
     no_script_name:         true
-    logging_enabled:        true
 
 dev:
   .settings:
@@ -36,5 +35,5 @@ all:
     escaping_strategy:      true
     escaping_method:        ESC_SPECIALCHARS
 
-    standard_helpers:       [Partial, JavascriptBase, Common]
+    standard_helpers:       [Partial, JavascriptBase]
     enabled_modules:        []
