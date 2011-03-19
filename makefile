@@ -7,12 +7,12 @@ DIRS = log cache
 
 
 # Ложные цели
-.PHONY := dirs cc test optimize clean update
-
+.PHONY := build dirs cc test optimize clean update dev
 
 
 # Сборка проекта (Default)
 build: cc
+	php ./symfony doctrine:build --all-classes
 	@echo
 
 
@@ -30,6 +30,11 @@ cc: dirs
 
 # Ребилд DEV
 dev: cc build
+	php ./symfony doctrine:drop-db --no-confirmation --env=dev
+	php ./symfony doctrine:create-db --env=dev
+	php ./symfony doctrine:migrate --env=dev
+	php ./symfony doctrine:data-load --env=dev
+	@echo
 
 
 # Deploy
@@ -42,6 +47,10 @@ optimize: dirs
 
 # Тесты
 test: build
+	php ./symfony doctrine:drop-db --no-confirmation --env=test
+	php ./symfony doctrine:create-db --env=test
+	php ./symfony doctrine:migrate --env=test
+	@echo
 	-phpunit --configuration ./test/phpunit.xml ./test/AllTests.php
 	@echo
 
