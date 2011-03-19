@@ -1,1 +1,11 @@
 #all:
+
+  sf_guard_plugin:
+    remember_cookie_name:         remember
+    remember_key_expiration_age:  2592000   # 30 days in seconds
+    routes_register:              false
+    success_signin_url:           homepage
+    success_signout_url:          homepage
+    allow_login_with_email:       true
+    signin_form:                  sfGuardFormSignin
+    register_remember_me:         true
